@@ -1,0 +1,46 @@
+
+==========================
+Summary of model fit
+==========================
+
+Formula:   smat1 ~ edges + mutual("PersonDrink") + asymmetric("PersonDrink") + 
+    gwidegree(fixed = F) + gwodegree(fixed = F) + gwesp(0.25, 
+    fixed = T) + gwdsp(0.25, fixed = TRUE) + nodematch("Gender") + 
+    nodeifactor("Gender") + nodeofactor("Gender") + nodematch("Ethnic") + 
+    nodeifactor("Ethnic") + nodeofactor("Ethnic") + nodematch("PersonDrink") + 
+    nodeifactor("PersonDrink", base = 1) + nodeofactor("PersonDrink", 
+    base = 1)
+
+Iterations:  20 
+
+Monte Carlo MLE Results:
+                           Estimate Std. Error MCMC % p-value    
+edges                     -2.388202   0.439783     NA  <1e-04 ***
+mutual.PersonDrink         2.679956   0.087687     NA  <1e-04 ***
+asymmetric.PersonDrink     0.533315   0.112333     NA  <1e-04 ***
+gwidegree                  1.214412   0.827283     NA  0.1422    
+gwidegree.decay           -0.008174   0.378959     NA  0.9828    
+gwodegree                 -1.182323   0.739534     NA  0.1100    
+gwodegree.decay           -0.244036   0.455878     NA  0.5925    
+gwesp.fixed.0.25           1.380916   0.130435     NA  <1e-04 ***
+gwdsp.fixed.0.25          -0.271343   0.025915     NA  <1e-04 ***
+nodematch.Gender           0.430540   0.094435     NA  <1e-04 ***
+nodeifactor.Gender.2      -0.194711   0.116536     NA  0.0949 .  
+nodeofactor.Gender.2       0.092862   0.127107     NA  0.4651    
+nodematch.Ethnic          -0.151857   0.358846     NA  0.6722    
+nodeifactor.Ethnic.2      -0.107758   0.354704     NA  0.7613    
+nodeofactor.Ethnic.2      -0.178540   0.343964     NA  0.6038    
+nodematch.PersonDrink     -0.858327   0.135001     NA  <1e-04 ***
+nodeifactor.PersonDrink.2  0.016461   0.099057     NA  0.8680    
+nodeofactor.PersonDrink.2  0.026099   0.134442     NA  0.8461    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Warning:  The standard errors are suspect due to possible poor convergence.
+
+     Null Deviance:     0  on 2652  degrees of freedom
+ Residual Deviance: -1134  on 2634  degrees of freedom
+ 
+Note that the null model likelihood and deviance are defined to be 0.
+
+AIC: -1098    BIC: -992.1    (Smaller is better.) 

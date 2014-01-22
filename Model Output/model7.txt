@@ -1,0 +1,44 @@
+
+==========================
+Summary of model fit
+==========================
+
+Formula:   smat1 ~ edges + mutual("PersonDrink") + asymmetric("PersonDrink") + 
+    gwidegree(fixed = T) + gwodegree(fixed = T) + gwesp(0.25, 
+    fixed = T) + gwdsp(0.25, fixed = TRUE) + nodematch("Gender") + 
+    nodeifactor("Gender") + nodeofactor("Gender") + nodematch("Ethnic") + 
+    nodeifactor("Ethnic") + nodeofactor("Ethnic") + nodematch("PersonDrink") + 
+    nodeifactor("PersonDrink", base = 1) + nodeofactor("PersonDrink", 
+    base = 1)
+
+Iterations:  20 
+
+Monte Carlo MLE Results:
+                          Estimate Std. Error MCMC % p-value    
+edges                     -2.37735    0.44428     NA  <1e-04 ***
+mutual.PersonDrink        -1.23803    0.09005     NA  <1e-04 ***
+asymmetric.PersonDrink    -1.42753    0.11178     NA  <1e-04 ***
+gwidegree                  1.16312    0.78397     NA   0.138    
+gwodegree                 -0.95413    0.58407     NA   0.102    
+gwesp.fixed.0.25           1.38000    0.12916     NA  <1e-04 ***
+gwdsp.fixed.0.25          -0.26982    0.02531     NA  <1e-04 ***
+nodematch.Gender           0.42479    0.07922     NA  <1e-04 ***
+nodeifactor.Gender.2      -0.19752    0.11241     NA   0.079 .  
+nodeofactor.Gender.2       0.07999    0.12704     NA   0.529    
+nodematch.Ethnic          -0.15961    0.36269     NA   0.660    
+nodeifactor.Ethnic.2      -0.08938    0.36018     NA   0.804    
+nodeofactor.Ethnic.2      -0.17257    0.35600     NA   0.628    
+nodematch.PersonDrink      1.10936    0.13884     NA  <1e-04 ***
+nodeifactor.PersonDrink.2  0.02625    0.10900     NA   0.810    
+nodeofactor.PersonDrink.2  0.04734    0.13078     NA   0.717    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Warning:  The standard errors are suspect due to possible poor convergence.
+
+     Null Deviance:     0  on 2652  degrees of freedom
+ Residual Deviance: -1130  on 2636  degrees of freedom
+ 
+Note that the null model likelihood and deviance are defined to be 0.
+
+AIC: -1098    BIC: -1003    (Smaller is better.) 

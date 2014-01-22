@@ -1,0 +1,47 @@
+
+==========================
+Summary of model fit
+==========================
+
+Formula:   smat1 ~ edges + mutual("PersonDrink") + asymmetric("PersonDrink") + 
+    gwidegree(fixed = T) + gwodegree(fixed = T) + gwesp(0.25, 
+    fixed = T) + gwdsp(0.25, fixed = TRUE) + nodematch("Gender") + 
+    nodeifactor("Gender") + nodeofactor("Gender") + nodematch("Ethnic") + 
+    nodeifactor("Ethnic") + nodeofactor("Ethnic") + nodematch("PersonDrink") + 
+    nodeifactor("PersonDrink", base = 1) + nodeofactor("PersonDrink", 
+    base = 1)
+
+Iterations:  20 
+
+Monte Carlo MLE Results:
+                          Estimate Std. Error MCMC % p-value    
+edges                      0.00000         NA     NA      NA    
+mutual.PersonDrink         1.70651    0.08681     NA < 1e-04 ***
+asymmetric.PersonDrink     0.10063    0.11232     NA 0.37039    
+gwidegree                  1.11323    0.80206     NA 0.16527    
+gwodegree                 -0.89899    0.59593     NA 0.13153    
+gwesp.fixed.0.25           1.28711    0.13006     NA < 1e-04 ***
+gwdsp.fixed.0.25          -0.25075    0.02597     NA < 1e-04 ***
+nodematch.Gender           0.41410    0.08693     NA < 1e-04 ***
+nodeifactor.Gender.2      -0.18472    0.12080     NA 0.12635    
+nodeofactor.Gender.2       0.08907    0.12060     NA 0.46025    
+nodematch.Ethnic          -0.14780    0.38399     NA 0.70034    
+nodeifactor.Ethnic.2      -0.08572    0.36579     NA 0.81474    
+nodeofactor.Ethnic.2      -0.16414    0.37011     NA 0.65744    
+nodematch.PersonDrink     -0.39126    0.13408     NA 0.00355 ** 
+nodeifactor.PersonDrink.2  0.02464    0.12599     NA 0.84494    
+nodeofactor.PersonDrink.2  0.03784    0.11891     NA 0.75035    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Warning:  The standard errors are suspect due to possible poor convergence.
+
+     Null Deviance:    0.0  on 2652  degrees of freedom
+ Residual Deviance: -365.7  on 2636  degrees of freedom
+ 
+Note that the null model likelihood and deviance are defined to be 0.
+
+AIC: -333.7    BIC: -239.6    (Smaller is better.) 
+
+ Warning: The following terms could not be estimated because they conflicted with the sample space constraint:
+  edges 
